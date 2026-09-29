@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        EduGenie - AI Learning Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="hero">
+
+    <div class="container">
+
+        <div class="badge">
+            AI POWERED LEARNING
+        </div>
+
+        <h1>
+            EduGenie
+        </h1>
+
+        <p>
+            Ask questions, understand concepts,
+            generate quizzes, summarize content,
+            and create learning paths.
+        </p>
+
+    </div>
+
+</header>
+
+
+<main class="container main-grid">
+
+
+<section class="card">
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="eyebrow">
+                Study Workspace
+            </span>
+
+            <h2>
+                What would you like to do?
+            </h2>
+
+        </div>
+
+        <span
+            id="status"
+            class="status"
+        >
+            Ready
+        </span>
+
+    </div>
+
+
+    <label for="task">
+        Task
+    </label>
+
+    <select id="task">
+
+        <option value="qa">
+            Ask a Question
+        </option>
+
+        <option value="explain">
+            Explain a Concept
+        </option>
+
+        <option value="quiz">
+            Generate Quiz
+        </option>
+
+        <option value="summarize">
+            Summarize Text
+        </option>
+
+        <option value="learn">
+            Learning Path
+        </option>
+
+    </select>
+
+
+    <div
+        id="level-wrap"
+        class="field hidden"
+    >
+
+        <label for="level">
+            Learner Level
+        </label>
+
+        <select id="level">
+
+            <option value="beginner">
+                Beginner
+            </option>
+
+            <option value="intermediate">
+                Intermediate
+            </option>
+
+            <option value="advanced">
+                Advanced
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <label for="inputText">
+        Your Input
+    </label>
+
+    <textarea
+        id="inputText"
+        rows="9"
+        placeholder="Enter your question, topic or passage..."
+    ></textarea>
+
+
+    <div class="actions">
+
+        <button
+            id="submitBtn"
+            class="primary"
+        >
+            Run EduGenie
+        </button>
+
+        <button
+            id="clearBtn"
+            class="secondary"
+        >
+            Clear
+        </button>
+
+    </div>
+
+
+    <p
+        id="hint"
+        class="hint"
+    ></p>
+
+
+</section>
+
+
+<section class="card result-card">
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="eyebrow">
+                Result
+            </span>
+
+            <h2>
+                Learning Response
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="result"
+        class="result empty"
+    >
+
+        <div class="empty-icon">
+            ✦
+        </div>
+
+        <p>
+            Your result will appear here.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        EduGenie · FastAPI + Google Gemini
+
+    </div>
+
+</footer>
+
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>
